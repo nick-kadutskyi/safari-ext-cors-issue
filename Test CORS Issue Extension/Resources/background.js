@@ -1,4 +1,4 @@
-browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log("Received request: ", request);
 
     if (request.greeting === "hello"){
@@ -13,7 +13,7 @@ browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
 });
 
-browser.action.onClicked.addListener(()=>{
+chrome.action.onClicked.addListener(()=>{
     
     fetch("https://example.com")
     .then(response=>{
